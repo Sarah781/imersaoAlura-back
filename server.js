@@ -1,9 +1,11 @@
-import express from "express"; // Importa o framework Express.js para criar o servidor
-import routes from "./src/routes/postsRoutes.js"; // Importa as rotas da aplicação
+import express from "express";
+import routes from "./src/routes/postsRoutes.js";
 
-const app = express(); // Cria uma instância do aplicativo Express
-routes(app); // Registra as rotas no aplicativo
+const app = express();
+app.use(express.static("uploads"))
+routes(app)
 
-app.listen(3000, () => { 
-    console.log("Server listening ..."); 
-}); // Inicia o servidor na porta 3000 e exibe uma mensagem no console
+// Inicia o servidor na porta 3000 e exibe uma mensagem no console
+app.listen(3000, () => {
+    console.log("Servidor escutando...");
+});
