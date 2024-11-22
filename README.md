@@ -22,6 +22,11 @@ npm install @google/generative-ai
 npm install dotenv
 ```
 
+```bash
+npm install multer
+```
+
+
 ## Iniciar o servidor:
 ```bash
 npm run dev
